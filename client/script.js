@@ -8,8 +8,9 @@ fetch(request)
     const ul = document.createElement("ul");
     document.body.appendChild(ul);
     users.forEach((user) => {
-      const html = `<li style="background-color: ${user.color}">
-        Namn: ${user.firstName} ${user.lastName}
+      const html = `<li class = "styling" style="border-color: ${user.color};
+      color: ${user.color}">
+        Namn: ${user.firstName} ${user.lastName} <br>
         Användarnamn: ${user.username}
     </li>`;
       ul.insertAdjacentHTML("beforeend", html);
