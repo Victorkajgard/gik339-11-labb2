@@ -15,17 +15,14 @@ server
 server.listen(3000, () => console.log("Server running"));
 
 server.get("/users", (req, res) => {
-  
   const db = new sqlite3.Database("./gik339-labb2.db");
-  const sql = 'SELECT * FROM users';
+  const sql = "SELECT * FROM users";
 
   db.all(sql, (err, rows) => {
-    if(err){
+    if (err) {
       res.status(500).send(err);
     } else {
       res.send(rows);
     }
   });
 });
-
-
